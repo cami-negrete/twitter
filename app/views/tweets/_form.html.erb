@@ -10,18 +10,15 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div>
-    <%= form.label :username, style: "display: block" %>
-    <%= form.text_field :username %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+<form>
+ <div class="mb-3">
+    <%= form.label :username, class:"form-label" %>
+    <%= form.text_field :username, class:"form-control" %>
+ </div>
+  <div class="mb-3">
+    <%= form.label :description, class:"form-label" %>
+    <%= form.text_field :description, class:"form-control" %>
+ </div>
+    <%= form.submit class:"btn btn-primary" %>
+</form>
 <% end %>
